@@ -19,16 +19,16 @@ app.post('/calculate', (req, res) => {
         } = req.body
 
         const electricityFactor = 0.3978;
-        const transportationFactor = 0.3978;
-        const shortFlightFactor = 0.3978;
-        const mediumFlightFactor = 0.3978;
-        const largeFlightFactor = 0.3978;
+        const transportationFactor = 9.087;
+        const shortFlightFactor = 100;
+        const mediumFlightFactor = 200;
+        const largeFlightFactor = 300;
         const dietaryChoiceFactor = {
             vegetarian : 400,
             non_vegetarian : 800
         }
         
-        year = 12;
+        const year = 12;
 
         const electricityEmission = electricityUsageKwh * electricityFactor;
         const transportationEmission = transportationUsagePerMonth * transportationFactor;
